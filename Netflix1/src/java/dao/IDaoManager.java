@@ -10,4 +10,5 @@ public interface IDaoManager
     void abortarTransação();
     VideoDao getVideoDao();
     UsuarioDao getUsuarioDao();
+    HistoricoDao getHistoricoDao();
 }

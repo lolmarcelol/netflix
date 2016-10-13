@@ -11,5 +11,6 @@ public interface VideoDao {
     public List pesquisarVideoDao(Video video);
     public List pesquisarAllVideo();
     public void excluirVideo(int video_id);
+    public Video findVideoId(int id);
     
 }

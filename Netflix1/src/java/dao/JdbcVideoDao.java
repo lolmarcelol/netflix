@@ -160,5 +160,30 @@ public class JdbcVideoDao implements VideoDao {
             throw new DaoException(ex.getMessage());
         }
     }
+
+    @Override
+    public Video findVideoId(int id) {
+         try{
+            String query = "select titulo,adicionadoEm,produzidoEm,status,Produtoras_id,Categorias_id,Idiomas_id,Generos_id from mensagens where id = " + id;
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            Video videodb = new Video();
+            while (rs.next())
+            {
+                videodb.setTitulo(rs.getString("titulo"));
+                videodb.setAdicionadosEm(rs.getTimestamp("adicionadoEm"));
+                videodb.setProduzidoEm(rs.getTimestamp("produzidoEm"));
+                videodb.setStatus(rs.getBoolean("status"));
+                videodb.getProdutora().setId(rs.getInt("Produtoras_id"));
+                videodb.getCategoria().setId(rs.getInt("Categorias_id"));
+                videodb.getIdioma().setId(rs.getInt("Idiomas_id"));
+                videodb.getGenero().setId(rs.getInt("Generos_id"));
+            }
+
+            return videodb;
+        } catch(Exception ex){
+            throw new DaoException(ex.getMessage());
+            
+        }    }
     
 }

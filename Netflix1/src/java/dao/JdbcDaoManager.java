@@ -11,6 +11,7 @@ public class JdbcDaoManager implements IDaoManager
     Connection conexão;
     private JdbcVideoDao mensagemDAO;
     private JdbcUsuarioDao usuarioDAO;
+    private JdbcHistoricoDao historicoDAO;
     public JdbcDaoManager(){
         
     }
@@ -28,6 +29,7 @@ public class JdbcDaoManager implements IDaoManager
             conexão.setAutoCommit(false);
             mensagemDAO = new JdbcVideoDao(conexão);
             usuarioDAO = new JdbcUsuarioDao(conexão);
+            historicoDAO = new JdbcHistoricoDao(conexão);
             
         }
         catch( Exception ex )
@@ -74,6 +76,11 @@ public class JdbcDaoManager implements IDaoManager
     @Override
     public UsuarioDao getUsuarioDao() {
         return usuarioDAO;
+    }
+
+    @Override
+    public HistoricoDao getHistoricoDao() {
+        return historicoDAO;
     }
         
     
