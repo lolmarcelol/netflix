@@ -37,7 +37,7 @@ public class VideoDetalhe extends HttpServlet {
         
         request.setAttribute("videos", video);
         RequestDispatcher rd;
-        rd = request.getRequestDispatcher("/WEB-INF/jsp/VideoDetalhe.jsp");
+        rd = request.getRequestDispatcher("/WEB-INF/jsp/video_detalhe.jsp");
 
         rd.forward(request, response);
     }

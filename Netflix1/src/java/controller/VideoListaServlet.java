@@ -33,7 +33,7 @@ public class VideoListaServlet extends HttpServlet {
         
         request.setAttribute("videos", videos);
         RequestDispatcher rd;
-        rd = request.getRequestDispatcher("/WEB-INF/jsp/ListaVideos.jsp");
+        rd = request.getRequestDispatcher("/WEB-INF/jsp/lista_videos.jsp");
 
         rd.forward(request, response);
     }

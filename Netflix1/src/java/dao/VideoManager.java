@@ -27,7 +27,7 @@ public class VideoManager implements IVideoManager {
 
         Video p2 = new Video(2,"iambread");
         
-        Video p3 = new Video (3, "capsule_616x353");
+        Video p3 = new Video (3, "rocketleague");
         
         videos.add(p1);
         videos.add(p2);

@@ -38,7 +38,7 @@ public class UsuarioServlet extends HttpServlet {
             throws ServletException, IOException {
         
         RequestDispatcher rd;
-        rd = request.getRequestDispatcher("/WEB-INF/jsp/UsuarioForm.jsp");
+        rd = request.getRequestDispatcher("/WEB-INF/jsp/usuario_form.jsp");
         rd.forward(request,response);
     }
     

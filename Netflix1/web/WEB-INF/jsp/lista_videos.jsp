@@ -19,10 +19,10 @@
         <c:forEach var="video"
                    items="${videos}">
             <div>
-                <p> ${video.titulo} </p>
-                <a href = "video-detalhe?id =${video.id}">
-                <img src="../Imagens/${video.titulo}.jpg" 
-                     alt ="/WEB-INF/jsp/VideoDetalhe.jsp" />
+                <h2> ${video.titulo} </h2>
+                <a href = "video_detalhe/?id =${video.id}">
+                <img src="Imagens/${video.titulo}.jpg" 
+                     alt ="/WEB-INF/jsp/detalhe.jsp" />
                 </a>
             </div>
         </c:forEach>    
