@@ -4,9 +4,25 @@
         <servlet-name>UsuarioServlet</servlet-name>
         <servlet-class>controller.UsuarioServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VideoServlet</servlet-name>
+        <servlet-class>controller.VideoListaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VideoDetalhe</servlet-name>
+        <servlet-class>controller.VideoDetalhe</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UsuarioServlet</servlet-name>
         <url-pattern>/NovoUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VideoServlet</servlet-name>
+        <url-pattern>/ListaVideos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VideoDetalhe</servlet-name>
+        <url-pattern>/VideoDetalhe</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

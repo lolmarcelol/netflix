@@ -3,15 +3,20 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import model.Video;
 
 
-public class JdbcDaoManager implements IDaoManager 
+public class JdbcDaoManager implements IDaoManager        
 {
+    
     
     Connection conexão;
     private JdbcVideoDao mensagemDAO;
     private JdbcUsuarioDao usuarioDAO;
     private JdbcHistoricoDao historicoDAO;
+
     public JdbcDaoManager(){
         
     }
@@ -19,7 +24,8 @@ public class JdbcDaoManager implements IDaoManager
     
     @Override
     public void iniciar() throws DaoException
-    {
+    {      
+        
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
@@ -83,5 +89,6 @@ public class JdbcDaoManager implements IDaoManager
         return historicoDAO;
     }
         
+   
     
 }
