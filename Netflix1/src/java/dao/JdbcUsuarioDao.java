@@ -28,7 +28,7 @@ public class JdbcUsuarioDao implements UsuarioDao {
         try{
             ps = connection.prepareStatement(query);
             ps.setString(1, usuario.getLogin());
-            ps.setString(2, usuario.getSenha());
+            ps.setString(2, usuario.getPassword());
             ps.setString(3, usuario.getNome());
             ps.setInt(4, usuario.getCpf());
                         
@@ -53,7 +53,7 @@ public class JdbcUsuarioDao implements UsuarioDao {
         try{
             ps = connection.prepareStatement(query);
             ps.setString(1, usuario.getLogin());
-            ps.setString(2, usuario.getSenha());
+            ps.setString(2, usuario.getPassword());
             ps.setString(3, usuario.getNome());
             ps.setInt(4, usuario.getCpf());
             ps.executeUpdate();

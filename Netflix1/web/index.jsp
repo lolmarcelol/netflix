@@ -12,6 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Bem Vindo A Nova Netflix!</h1>
+        <h2><a href="http://localhost:8084/Netflix1/NovoUsuario"> Cadastrar Novo Usuario</a><h2>
+        
     </body>
 </html>
